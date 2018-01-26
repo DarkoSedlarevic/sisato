@@ -82,7 +82,7 @@ $(document).ready(function() {
 });
 
 $(function(){
-  $('.twentytwenty-containerr').imagesLoaded( function() {
+  $('.twentytwenty-container').imagesLoaded( function() {
     // check for bug https://github.com/zurb/twentytwenty/issues/39
     $(".twentytwenty-container").twentytwenty({
       default_offset_pct: 0.8,
