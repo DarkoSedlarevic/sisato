@@ -204,6 +204,12 @@ p {
   margin-bottom: 1.3em;
   line-height: 1.6; }
 
+.lead {
+  font-size: 1.25em; }
+
+.font-small, small {
+  font-size: 0.8em; }
+
 .centered-headline-with-separator {
   text-align: center;
   margin: 0 auto 30px; }
@@ -219,12 +225,6 @@ p {
 @media screen and (min-width: 460px) {
   .centered-headline-with-separator:after {
     width: 230px; } }
-.lead {
-  font-size: 1.5em; }
-
-.font-small, small {
-  font-size: 0.8em; }
-
 /* Links
 ------------------------------------	*/
 a {
@@ -446,17 +446,17 @@ img::-moz-selection {
   -webkit-tap-highlight-color: transparent; }
 
 .owl-theme .owl-nav [class*='owl-'] {
-  color: #FFF;
+  color: #a3b1bb;
   font-size: 14px;
   margin: 5px;
   padding: 4px 7px;
-  background: #D6D6D6;
+  background: #eceff1;
   display: inline-block;
   cursor: pointer;
   border-radius: 3px; }
 
 .owl-theme .owl-nav [class*='owl-']:hover {
-  background: #869791;
+  background: #a3b1bb;
   color: #FFF;
   text-decoration: none; }
 
@@ -480,22 +480,24 @@ img::-moz-selection {
   width: 10px;
   height: 10px;
   margin: 5px 7px;
-  background: #D6D6D6;
+  background: #eceff1;
   display: block;
   -webkit-backface-visibility: visible;
   transition: opacity 200ms ease;
   border-radius: 30px; }
 
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
-  background: #869791; }
+  background: #a3b1bb; }
 
 .site-header {
   background: #fff;
   padding: 60px 0 60px; }
 
 .page-content {
+  position: relative;
   padding-bottom: 60px;
-  background: #fff; }
+  background: #fff;
+  z-index: 1; }
 
 .container {
   position: relative;
@@ -503,36 +505,11 @@ img::-moz-selection {
   padding: 0 20px;
   margin: 0 auto; }
 
-.qrato {
+.overflow-wrap {
   overflow-x: hidden; }
 
 /* Header Logo
 ------------------------------------	*/
-@keyframes bounce {
-  from, 20%, 53%, 80%, to {
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    transform: translate3d(0, 0, 0); }
-  40%, 43% {
-    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    transform: translate3d(0, -30px, 0); }
-  70% {
-    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    transform: translate3d(0, -15px, 0); }
-  90% {
-    transform: translate3d(0, -4px, 0); } }
-@keyframes headShake {
-  0% {
-    transform: translateX(0); }
-  6.5% {
-    transform: translateX(-6px) rotateY(-9deg); }
-  18.5% {
-    transform: translateX(5px) rotateY(7deg); }
-  31.5% {
-    transform: translateX(-3px) rotateY(-5deg); }
-  43.5% {
-    transform: translateX(2px) rotateY(3deg); }
-  50% {
-    transform: translateX(0); } }
 .header-logo {
   max-width: 320px;
   margin: 0 auto 40px;
@@ -545,12 +522,6 @@ img::-moz-selection {
   height: 1px;
   background: #000;
   margin: 20px auto 0; }
-
-.header-logo:hover {
-  animation-duration: 1s;
-  animation-name: bounce;
-  animation-fill-mode: both;
-  transform-origin: center bottom; }
 
 @media screen and (min-width: 460px) {
   .header-logo:after {
@@ -568,6 +539,9 @@ img::-moz-selection {
 @media screen and (min-width: 480px) {
   .narrow-content__marketing {
     width: 85%; } }
+.marketing-lead {
+  font-size: 1.5em; }
+
 .narrow-content__marketing .left-img {
   max-width: 120px;
   padding: 0 20px; }
@@ -638,6 +612,7 @@ img::-moz-selection {
   font-weight: normal;
   text-transform: uppercase;
   line-height: 1.2;
+  letter-spacing: 0.15em;
   text-decoration: none; }
 
 .sm-main-nav a.current {
@@ -1428,13 +1403,17 @@ a.btn {
   text-transform: uppercase;
   text-align: left; }
 
+.footer-box .copyright {
+  margin-top: -20px; }
+
 @media screen and (min-width: 480px) {
-  /* plaing around with fixed footer
-  ------------------------------------	*/
-  /* ------------------------------------	*/
+  /*empty div with same height as footer for curtain reveal effect*/
   .site-footer .container {
     display: flex;
-    justify-content: space-between; } }
+    justify-content: space-between; }
+
+  .footer-box .copyright {
+    margin-top: 0; } }
 .ornament-separator {
   background-image: url("../img/ornament-separator/ornament-separator-extra-small.svg");
   background-repeat: no-repeat;
@@ -1496,7 +1475,7 @@ a.btn {
 .product-entry--baby-liquid-soap .product-entry__image,
 .product-entry--black-liquid-soap .product-entry__image,
 .product-entry--foam-liquid-soap .product-entry__image {
-  text-align: left; }
+  text-align: center; }
 
 .product-entry--baby-liquid-soap .product-entry__image img {
   max-width: 222px; }
