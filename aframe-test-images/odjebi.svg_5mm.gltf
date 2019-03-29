@@ -111,7 +111,7 @@
         {
           "mode": 4,
           "attributes": {
-            "POSITION": 0,
+            "POSITION": 0.5,
             "NORMAL": 1
           },
           "indices": 2,
