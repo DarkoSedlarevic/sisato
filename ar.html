@@ -12,7 +12,7 @@
     init: function() {
       this.el.addEventListener("click", (e) => {
         console.log("clicked and animated")
-        this.el.emit("bar")
+        this.el.emit("start")
       })
     }
   })
@@ -46,7 +46,7 @@
   <a-entity id="test" position="0 0 0" rotation="0 -45 0">
         <!-- Letter O -->
         <a-entity id="letterO" position="0 0 0" rotation="0 0 0"
-                  foo animation="property: rotation; to: 360 0 0; loop: false; dur: 1500; easing: linear; startEvents: letter-animation-start;">
+                  letter-animation-start animation="property: rotation; to: 360 0 0; loop: false; dur: 1500; easing: linear; startEvents: start;">
 
             <!-- bottom - from left to right -->
             <a-box position="0 0 0" color="cyan" width="3" height="1" depth="1" shadow="cast: true;"></a-box>
@@ -63,7 +63,7 @@
 
         <!-- Letter D -->
         <a-entity id="letterD" position="4 0 0" rotation="0 0 0"
-                  foo animation="property: rotation; to: 360 0 0; loop: false; dur: 1500; easing: linear; startEvents: letter-animation-start;">
+                  letter-animation-start animation="property: rotation; to: 360 0 0; loop: false; dur: 1500; easing: linear; startEvents: start;">
 
             <!-- bottom - from left to right -->
             <a-box position="0 0 0" color="cyan" width="3" height="1" depth="1" shadow="cast: true;"></a-box>
@@ -82,7 +82,7 @@
 
         <!-- Letter J -->
         <a-entity id="letterJ" position="9 0 0" rotation="0 0 0"
-                  foo animation="property: rotation; to: 360 0 0; loop: false; dur: 1500; easing: linear; startEvents: letter-animation-start;">
+                  letter-animation-start animation="property: rotation; to: 360 0 0; loop: false; dur: 1500; easing: linear; startEvents: start;">
 
             <!-- bottom - from left to right -->
             <a-box position="1.5 0 0" color="cyan" width="2" height="1" depth="1" shadow="cast: true;"></a-box>
@@ -99,7 +99,7 @@
 
         <!-- Letter E -->
         <a-entity id="letterE" position="14 0 0" rotation="0 0 0"
-                  foo animation="property: rotation; to: 360 0 0; loop: false; dur: 1500; easing: linear; startEvents: letter-animation-start;">
+                  letter-animation-start animation="property: rotation; to: 360 0 0; loop: false; dur: 1500; easing: linear; startEvents: start;">
 
             <!-- bottom - from left to right -->
             <a-box position="0 0 0" color="cyan" width="3" height="1" depth="1" shadow="cast: true;"></a-box>
@@ -116,7 +116,7 @@
 
         <!-- Letter B -->
         <a-entity id="letterB" position="18 0 0" rotation="0 0 0"
-                  foo animation="property: rotation; to: 360 0 0; loop: false; dur: 1500; easing: linear; startEvents: letter-animation-start;">
+                  letter-animation-start animation="property: rotation; to: 360 0 0; loop: false; dur: 1500; easing: linear; startEvents: start;">
 
             <!-- bottom - from left to right -->
             <a-box position="-0.5 0 0" color="cyan" width="2" height="1" depth="1" shadow="cast: true;"></a-box>
@@ -135,7 +135,7 @@
 
         <!-- Letter I -->
         <a-entity id="letterI" position="23 0 0" rotation="0 0 0"
-                  foo animation="property: rotation; to: 360 0 0; loop: false; dur: 1500; easing: linear; startEvents: letter-animation-start;">
+                  letter-animation-start animation="property: rotation; to: 360 0 0; loop: false; dur: 1500; easing: linear; startEvents: start;">
 
             <!-- Left side -->
             <a-box position="-1.5 2 0" color="cyan" width="1" height="5" depth="1" shadow="cast: true;"></a-box>
